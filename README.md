@@ -11,6 +11,12 @@ yarn install
 npm i -D @vue/cli-plugin-babel @vue/cli-plugin-eslint @vue/cli-plugin-unit-jest @vue/cli-service @vue/eslint-config-prettier @vue/test-utils babel-eslint eslint eslint-plugin-prettier eslint-plugin-vue prettier vue-template-compiler
 ```
 
+### Storybook setting
+
+```bash
+npx -p @storybook/cli sb init --type vue
+```
+
 ### Compiles and hot-reloads for development
 ```
 yarn serve
