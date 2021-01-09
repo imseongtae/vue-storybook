@@ -5,6 +5,12 @@
 yarn install
 ```
 
+### ESLint Setup
+
+```bash
+npm i -D @vue/cli-plugin-babel @vue/cli-plugin-eslint @vue/cli-plugin-unit-jest @vue/cli-service @vue/eslint-config-prettier @vue/test-utils babel-eslint eslint eslint-plugin-prettier eslint-plugin-vue prettier vue-template-compiler
+```
+
 ### Compiles and hot-reloads for development
 ```
 yarn serve
