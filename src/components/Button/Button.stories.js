@@ -28,6 +28,12 @@ Secondary.args = {
 	label: 'Button',
 };
 
+export const Disabled = Template.bind({});
+Disabled.args = {
+	label: 'Button',
+	disabled: true,
+};
+
 export const Large = Template.bind({});
 Large.args = {
 	size: 'large',

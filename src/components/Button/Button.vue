@@ -18,6 +18,10 @@ export default {
 			type: Boolean,
 			default: false,
 		},
+		disabled: {
+			type: Boolean,
+			default: false,
+		},
 		size: {
 			type: String,
 			default: 'medium',
@@ -29,14 +33,14 @@ export default {
 			type: String,
 		},
 	},
-
 	computed: {
 		classes() {
 			return {
-				'storybook-button': true,
-				'storybook-button--primary': this.primary,
-				'storybook-button--secondary': !this.primary,
-				[`storybook-button--${this.size}`]: true,
+				button: true,
+				'button--primary': this.primary,
+				'button--secondary': !this.primary,
+				'button--disabled': !this.primary && this.disabled,
+				[`button--${this.size}`]: true,
 			};
 		},
 		style() {
@@ -55,34 +59,55 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.storybook-button {
-	font-family: inherit;
-	font-weight: 700;
-	border: 0;
-	border-radius: 3em;
+.button {
+	// display: inline-block;
+	border: 1px solid #4f00ff;
+	border-radius: 4px;
+	color: #4f00ff;
+	font: {
+		family: inherit;
+		weight: 700;
+	}
+	letter-spacing: 0.16px;
+	text-align: center;
 	cursor: pointer;
-	display: inline-block;
-	line-height: 1;
+
+	// enabled, disabled, un-fill
+	&--primary {
+		color: white;
+		background-color: #4f00ff;
+	}
+	&--secondary {
+		background-color: #fff;
+	}
+	&--disabled {
+		cursor: not-allowed;
+		color: #999;
+		background-color: #f3f3f3;
+		border: 1px solid #eaeaea;
+	}
+	// 각 button의 width 값은 변경될 수 있음
+	&--small {
+		font-size: 14px;
+		padding: 10px 16px;
+		width: 288px;
+	}
+	&--medium {
+		padding: 11px 20px;
+		font-size: 16px;
+		width: 320px;
+	}
+	&--large {
+		font-size: 16px;
+		padding: 15px 24px;
+		width: 392px;
+	}
 }
-.storybook-button--primary {
-	color: white;
-	background-color: #1ea7fd;
-}
-.storybook-button--secondary {
-	color: #333;
-	background-color: transparent;
-	box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-}
-.storybook-button--small {
-	font-size: 12px;
-	padding: 10px 16px;
-}
-.storybook-button--medium {
-	font-size: 14px;
-	padding: 11px 20px;
-}
-.storybook-button--large {
-	font-size: 16px;
-	padding: 12px 24px;
+
+.btn {
+	&.h-lg {
+		height: 3.5rem;
+		line-height: 3.5rem;
+	}
 }
 </style>
