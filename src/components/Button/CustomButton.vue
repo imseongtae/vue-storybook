@@ -27,7 +27,7 @@ export default {
 				return ['small', 'medium', 'large'].indexOf(value) !== -1;
 			},
 		},
-		backgroundColor: {
+		color: {
 			type: String,
 		},
 	},
@@ -42,8 +42,11 @@ export default {
 			};
 		},
 		style() {
+			if (this.disabled) return;
 			return {
-				backgroundColor: this.backgroundColor,
+				backgroundColor: this.primary ? this.color : '#fff',
+				borderColor: !this.primary ? this.color : '#fff',
+				color: !this.primary ? this.color : '#fff',
 			};
 		},
 	},
@@ -102,6 +105,7 @@ export default {
 	}
 }
 
+// 버튼의 높이를 표현해야 하는 경우가 생긴다면
 .btn {
 	&.h-lg {
 		height: 3.5rem;

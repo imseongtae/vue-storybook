@@ -4,7 +4,8 @@ export default {
 	title: 'Example/Button',
 	component: CustomButton,
 	argTypes: {
-		backgroundColor: { control: 'color' },
+		// backgroundColor: { control: 'color' },
+		color: { control: 'color' },
 		size: {
 			control: { type: 'select', options: ['small', 'medium', 'large'] },
 		},
