@@ -3,6 +3,12 @@ import LoadingSpinner from './LoadingSpinner.vue';
 export default {
 	title: 'Example/LoadingSpinner',
 	component: LoadingSpinner,
+	decorators: [
+		() => ({
+			template:
+				'<div style="margin: 3em; display:flex; justify-content: center; max-width: 1024px"><story/></div>',
+		}),
+	],
 	argTypes: {
 		color: { control: 'color' },
 		size: {

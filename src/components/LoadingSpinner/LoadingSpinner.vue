@@ -27,6 +27,7 @@ export default {
 				[`spinner--${this.size}`]: true,
 			};
 		},
+		// Storybook을 위해 사용되는 computed
 		style() {
 			return {
 				borderBottomColor: this.color,
@@ -37,12 +38,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.spinner-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 240px;
-}
+// LoadingSpinner 컴포넌트를 사용하는 쪽에서 Container를 만들어서 레이아웃 정렬
+// .spinner-container {
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	height: 240px;
+// }
 .spinner {
 	width: 50px;
 	height: 50px;
