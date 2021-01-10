@@ -41,6 +41,7 @@ export default {
 				[`button--${this.size}`]: true,
 			};
 		},
+		// Storybook을 위해 사용되는 computed value
 		style() {
 			if (this.disabled) return;
 			return {
