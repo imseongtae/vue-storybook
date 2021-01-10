@@ -5,10 +5,8 @@
 </template>
 
 <script>
-// import '@/stories/button.css';
-
 export default {
-	name: 'my-button',
+	name: 'custom-button',
 	props: {
 		label: {
 			type: String,
