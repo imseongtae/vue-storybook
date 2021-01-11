@@ -22,7 +22,7 @@ const Template = (args, { argTypes }) => ({
 
 export const TwoColumns = Template.bind({});
 TwoColumns.args = {
-	options: ['신용카드', '카카오페이', '네이버페이'],
+	options: ['신용카드', '카카오페이'],
 };
 
 export const ThreeColumns = Template.bind({});

@@ -1,8 +1,8 @@
-import CustomButton from './CustomButton.vue';
+import AppButton from './AppButton.vue';
 
 export default {
 	title: 'Example/Button',
-	component: CustomButton,
+	component: AppButton,
 	argTypes: {
 		// backgroundColor: { control: 'color' },
 		color: { control: 'color' },
@@ -14,8 +14,8 @@ export default {
 
 const Template = (args, { argTypes }) => ({
 	props: Object.keys(argTypes),
-	components: { CustomButton },
-	template: '<custom-button @click="onClick" v-bind="$props" />',
+	components: { AppButton },
+	template: '<app-button @click="onClick" v-bind="$props" />',
 });
 
 export const Primary = Template.bind({});
