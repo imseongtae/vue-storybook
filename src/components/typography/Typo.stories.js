@@ -13,9 +13,9 @@ const Template = (args, { argTypes }) => ({
 
 export const typoStyle = Template.bind({});
 typoStyle.args = {
-	title: 'This text is title typo, 우리 아이가 혼자서 집중하는',
+	title: 'This text is title, 우리 아이가 혼자서 집중하는',
 	bodyText:
 		'Lorem ipsum dolor sit amet consectetur adipisicing elit. 우리 아이가 혼자서 집중하는',
-	subTitle: 'This text is sub title typo 우리 아이가 혼자서 집중하는',
-	subBodyText: 'This text is sub body text typo 우리 아이가 혼자서 집중하는',
+	subTitle: 'This text is sub title 우리 아이가 혼자서 집중하는',
+	subBodyText: 'This text is sub body text 우리 아이가 혼자서 집중하는',
 };
