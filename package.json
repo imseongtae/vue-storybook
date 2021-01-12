@@ -2,13 +2,17 @@
   "name": "vue-storybook",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://imseongtae.github.io/vue-storybook",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
+    "dev": "start-storybook -p 6006",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static"    
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -31,6 +35,7 @@
     "eslint": "^7.17.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.4.1",
+    "gh-pages": "^3.1.0",
     "node-sass": "^4.12.0",
     "prettier": "^2.2.1",
     "sass-loader": "^8.0.2",
