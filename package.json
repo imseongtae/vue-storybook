@@ -2,7 +2,7 @@
   "name": "@imseongtae/vue-ui",
   "version": "0.1.2",
   "main": "dist/haemil.common.js",
-  "description": "imseongtae vue components",
+  "description": "vue UI components created by haemil",
   "author": {
     "name": "imseongtae",
     "email": "dev.haemil@gmail.com"

@@ -1,19 +1,20 @@
-# vue-storybook
-투두리스트 먼저 빠르게 쳐내기
+# @imseongtae/vue-ui
+vue ui created by haemil
 ## Table of Contents
 - [x] BigRadioField
 - [x] Button
 - [x] LoadingSpinner
+- [x] SelectBox
+- [x] Input
+- [x] Modal
 - [ ] CheckBox
-- [x] SelectBox - 좀 더 수정이 필요함
 - [ ] Card
 - [ ] Header
-- [ ] Form
-- [x] Modal/Alert
-- [ ] Title
+
 
 ## Project setup
-```
+
+```bash
 yarn install
 ```
 
