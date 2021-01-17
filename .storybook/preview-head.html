@@ -5,7 +5,7 @@
     line-height: 1.2;
     word-wrap: break-word;
   }
-  body {    
+  body {
     -webkit-font-smoothing: antialiased;
   }
   html, body, div, span, applet, object, iframe,
@@ -57,4 +57,22 @@
     background: transparent;
     cursor: pointer;
   }
+  
+  /* ---------- Custom Style for Storybook ---------- */
+  .list {
+    display: flex;
+    flex-direction: column;
+  }
+  .list > .list-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+  .list > .list-item > .label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+    color: #555;
+  }
+
 </style>
