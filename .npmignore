@@ -1,0 +1,8 @@
+.storybook
+node_modules
+src/
+public/
+.tests/
+.eslintrc.js
+.editorconfig
+.jest.config.js
