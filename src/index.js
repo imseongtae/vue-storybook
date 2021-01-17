@@ -1,6 +1,6 @@
 // Components
-import AppButton from './components/Button/AppButton.vue';
-import AppInput from './components/Input/AppInput.vue';
+import AppButton from '@/components/Button/AppButton.vue';
+import AppInput from '@/components/Input/AppInput.vue';
 
 const components = [AppButton, AppInput];
 
