@@ -1,12 +1,12 @@
 <template>
-	<button type="button" :class="classes" @click="onClick" :style="style">
+	<button :type="buttonType" :class="classes" @click="onClick" :style="style">
 		{{ label }}
 	</button>
 </template>
 
 <script>
 export default {
-	name: 'app-button',
+	name: 'AppButton',
 	props: {
 		label: {
 			type: String,
@@ -19,6 +19,11 @@ export default {
 		disabled: {
 			type: Boolean,
 			default: false,
+		},
+		buttonType: {
+			type: String,
+			required: false,
+			default: 'button',
 		},
 		size: {
 			type: String,
@@ -34,24 +39,23 @@ export default {
 	computed: {
 		classes() {
 			return {
-				button: true,
-				'button--primary': this.primary,
-				'button--secondary': !this.primary,
-				'button--disabled': !this.primary && this.disabled,
-				[`button--${this.size}`]: true,
+				'app-button': true,
+				'app-button--primary': this.primary,
+				'app-button--secondary': !this.primary,
+				'app-button--disabled': !this.primary && this.disabled,
+				[`app-button--${this.size}`]: true,
 			};
 		},
-		// Storybook을 위해 사용되는 computed value
+		// Storybook 색상 컨트롤을 위해 사용되는 computed value
 		style() {
 			if (this.disabled) return;
 			return {
 				backgroundColor: this.primary ? this.color : '#fff',
-				borderColor: !this.primary ? this.color : '#fff',
-				color: !this.primary ? this.color : '#fff',
+				borderColor: this.color,
+				color: this.primary ? '#fff' : this.color,
 			};
 		},
 	},
-
 	methods: {
 		onClick() {
 			this.$emit('onClick');
@@ -61,7 +65,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.button {
+.app-button {
 	// display: inline-block;
 	border: 1px solid #4f00ff;
 	border-radius: 4px;
@@ -73,7 +77,6 @@ export default {
 	letter-spacing: 0.16px;
 	text-align: center;
 	cursor: pointer;
-
 	// enabled, disabled, un-fill
 	&--primary {
 		color: white;
@@ -103,14 +106,6 @@ export default {
 		font-size: 16px;
 		padding: 15px 24px;
 		width: 392px;
-	}
-}
-
-// 버튼의 높이를 표현해야 하는 경우가 생긴다면
-.btn {
-	&.h-lg {
-		height: 3.5rem;
-		line-height: 3.5rem;
 	}
 }
 </style>

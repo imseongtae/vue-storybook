@@ -4,7 +4,6 @@ export default {
 	title: 'Example/Button',
 	component: AppButton,
 	argTypes: {
-		// backgroundColor: { control: 'color' },
 		color: { control: 'color' },
 		size: {
 			control: { type: 'select', options: ['small', 'medium', 'large'] },
@@ -15,7 +14,7 @@ export default {
 const Template = (args, { argTypes }) => ({
 	props: Object.keys(argTypes),
 	components: { AppButton },
-	template: '<app-button @click="onClick" v-bind="$props" />',
+	template: '<app-button @onClick="onClick" v-bind="$props" />',
 });
 
 export const Primary = Template.bind({});
@@ -35,14 +34,23 @@ Disabled.args = {
 	disabled: true,
 };
 
-export const Large = Template.bind({});
-Large.args = {
-	size: 'large',
-	label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-	size: 'small',
-	label: 'Button',
-};
+export const sizes = (args, { argTypes }) => ({
+	components: { AppButton },
+	props: Object.keys(argTypes),
+	template: `
+		<ul class="list">		
+			<li class="list-item">
+				<p class="label">Small</p>
+				<app-button :size="'small'" :label="'Button'" v-bind="$props" @onClick="onClick" />
+			</li>
+			<li class="list-item">
+				<p class="label">Medium</p>
+				<app-button :size="'medium'" :label="'Button'" v-bind="$props" @onClick="onClick" />
+			</li>
+			<li class="list-item">
+				<p class="label">Large</p>
+				<app-button :size="'large'" :label="'Button'" v-bind="$props" @onClick="onClick" />
+			</li>
+		</ul>
+	`,
+});
