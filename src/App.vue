@@ -1,17 +1,37 @@
 <template>
 	<div id="app">
 		<img alt="Vue logo" src="./assets/logo.png" />
-		<HelloWorld msg="Welcome to Your Vue.js App" />
+		<app-input
+			:id="'name'"
+			:placeholder="'placeholder'"
+			@onInput="onInputTest"
+			:state="testState"
+		/>
 	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import AppInput from '@/components/Input/AppInput.vue';
 
 export default {
 	name: 'App',
 	components: {
-		HelloWorld,
+		AppInput,
+	},
+	data() {
+		return {
+			testState: 'normal',
+		};
+	},
+	methods: {
+		onInputTest(payload) {
+			console.log(payload);
+			if (payload === 'haemil') {
+				this.testState = 'valid';
+			} else {
+				this.testState = 'normal';
+			}
+		},
 	},
 };
 </script>
@@ -24,5 +44,9 @@ export default {
 	text-align: center;
 	color: #2c3e50;
 	margin-top: 60px;
+}
+
+* {
+	box-sizing: border-box;
 }
 </style>
