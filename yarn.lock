@@ -1161,6 +1161,14 @@
   resolved "https://registry.yarnpkg.com/@icons/material/-/material-0.2.4.tgz#e90c9f71768b3736e76d7dd6783fc6c2afa88bc8"
   integrity sha512-QPcGmICAPbGLGb6F/yNf/KzKqvFx8z5qx3D1yFqVAjoFmXK35EgyW+cJ57Te3CNsmzblwtzakLGFqHPqrfb4Tw==
 
+"@imseongtae/vue-ui@^0.1.3":
+  version "0.1.3"
+  resolved "https://npm.pkg.github.com/download/@imseongtae/vue-ui/0.1.3/115d98d6f8b118fa4ca87a012c94d44d9a3dd9cc0d6005f057cd5fe4edea2b3b#9cd635226eb4ac40c848a1bfbc7212094a628322"
+  integrity sha512-9RfK2Zd1CqaAm1//kEVB9c+bOElBmLHmRB7snplxlU0yAjLnnUn06FI5CY2tvJgv4jI4Gw6Tjg4hbGDC7QmTcw==
+  dependencies:
+    core-js "^3.6.5"
+    vue "^2.6.11"
+
 "@intervolga/optimize-cssnano-plugin@^1.0.5":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@intervolga/optimize-cssnano-plugin/-/optimize-cssnano-plugin-1.0.6.tgz#be7c7846128b88f6a9b1d1261a0ad06eb5c0fdf8"
