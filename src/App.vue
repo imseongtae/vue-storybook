@@ -7,16 +7,20 @@
 			@onInput="onInputTest"
 			:state="testState"
 		/>
+		<hr />
+		<app-button :label="'Button'" :primary="true" />
 	</div>
 </template>
 
 <script>
-import AppInput from '@/components/Input/AppInput.vue';
+// import AppInput from '@/components/Input/AppInput.vue';
+import { AppInput, AppButton } from '@imseongtae/vue-ui';
 
 export default {
 	name: 'App',
 	components: {
 		AppInput,
+		AppButton,
 	},
 	data() {
 		return {
